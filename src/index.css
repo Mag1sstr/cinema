@@ -33,4 +33,5 @@
 body {
   font-family: "Gilroy", sans-serif;
   background-color: var(--body-bg);
+  transition: 0.3s;
 }

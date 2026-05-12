@@ -5,7 +5,7 @@ function ChangeTheme() {
   return (
     <button
       onClick={toggleTheme}
-      className={`fixed bottom-2.5 right-2.5 w-9.5 h-9.5 rounded-full border-2 border-[#252424] ${theme === "dark" ? "bg-black" : "bg-white"}  flex items-center justify-center transition-all cursor-pointer hover:bg-[#2b2b2b]`}
+      className={`fixed bottom-2.5 right-2.5 w-9.5 h-9.5 rounded-full border-2 border-[#252424] ${theme === "dark" ? "bg-black hover:bg-[#2b2b2b]" : "bg-white hover:bg-[#e8e8e8]"}  flex items-center justify-center transition-all cursor-pointer `}
     >
       {theme === "dark" ? (
         <svg
