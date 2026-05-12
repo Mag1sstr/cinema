@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
 export type ThemeType = "dark" | "light";
 
@@ -14,10 +14,15 @@ export default function ThemeContextProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const [theme, setTheme] = useState<ThemeType>("dark");
+  const [theme, setTheme] = useState<ThemeType>(
+    (localStorage.getItem("theme") as ThemeType) || "dark",
+  );
 
   function toggleTheme() {
-    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
+    setTheme((prev) => {
+      localStorage.setItem("theme", prev === "dark" ? "light" : "dark");
+      return prev === "dark" ? "light" : "dark";
+    });
   }
 
   return (
@@ -26,3 +31,5 @@ export default function ThemeContextProvider({
     </ThemeContext.Provider>
   );
 }
+
+export const useTheme = () => useContext(ThemeContext);

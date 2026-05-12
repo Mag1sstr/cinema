@@ -21,7 +21,16 @@
   font-display: swap;
   src: url(/fonts/gilroy-bold.woff2) format("woff2");
 }
+
+:root {
+  --body-bg: #070606;
+}
+
+[data-theme="dark"] {
+  --body-bg: #fff;
+}
+
 body {
   font-family: "Gilroy", sans-serif;
-  background-color: #000;
+  background-color: var(--body-bg);
 }
