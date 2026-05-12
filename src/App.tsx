@@ -1,5 +1,11 @@
+import ChangeTheme from "./components/ui/ChangeTheme";
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <ChangeTheme />
+    </>
+  );
 }
 
 export default App;
