@@ -26,7 +26,7 @@
   --body-bg: #070606;
 }
 
-[data-theme="dark"] {
+[data-theme="light"] {
   --body-bg: #fff;
 }
 
